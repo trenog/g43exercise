@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}{{article.title}}{% endblock %}
+{% block main %}
+		<article class="article full">
+			<header>
+				<h1>{{article.title}}</h1>
+				<div class="pub-group">
+					<div class="pubdate">{{article.pub_date|date:"l, F j, Y"}}</div> |
+					<div class="author"><a href="">{{article.author}}</a></div>
+				</div>
+			</header>
+			<section>
+				<div class="hero-img"><img src="{% url 'g43:media' article.hero_image %}"/></div>
+				<div class="extra-img"><img src="{% url 'g43:media' article.optional_image %}"/></div>
+				<div class="full article-body">{{article.body_text|linebreaks}}</div>
+			</section>
+		</article>
+{% endblock %}

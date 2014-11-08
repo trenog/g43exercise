@@ -1,0 +1,7 @@
+include LICENSE
+include README.rst
+recursive-include g43exercise/static *
+recursive-include g43exercise/templates *
+recursive-include g43exercise/templatetags *
+recursive-include g43exercise/media *
+recursive-include g43exercise/docs *

@@ -1,0 +1,208 @@
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+.container {
+	padding-top: 20px;
+	background-color: #EEE;
+}
+.nav-links {
+	list-style: none;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+	#sidebar {
+		border: 1px solid black;
+	}
+	#side-img {
+		position: relative;
+		height: 100px;
+		margin-left: 15px;
+		border: 1px solid black;
+		background: url("../../img/cross-out.jpg") no-repeat center;
+		background-size: contain;
+	}
+	.nav-group {
+		margin-left: 15px;
+		height: 105px;
+		border: 1px solid black;
+	}
+	.nav-group div {
+		width: 50%;
+		float: left;
+		margin-left: 20px;
+	}
+	#nav-menu {
+		height: 50px;
+		width: 50px;
+		background-size: contain;
+		background: url("../../img/hamburger.jpg") no-repeat;
+	}
+	#nav-glass {
+		height: 50px;
+		width: 50px;
+		background: url("../../img/search.jpg") no-repeat;	
+	}
+	#sidebar .nav-links {
+		position: relative;
+		text-align: center;
+		margin-top: 25px;
+		margin-left: -25px;
+	}
+	.nav-img {
+		display: block;
+		margin: 0 auto;
+		border: 1px solid black;
+		width: 75px;
+		height: 75px;
+		background: url("../../img/cross-out.jpg") no-repeat;
+		background-size: contain;
+	}
+	.pub-group div {
+		display: inline;
+	}
+	
+	.article.preview header, .article.full header {
+		padding: 0;
+		margin: 0;
+		margin-bottom: 20px;
+	}
+	
+	.hero-img img{
+		max-width: 400px;
+	}
+	
+	.extra-img img {
+		position: relative;
+		float: right;
+		top: 40px;
+		right: 16%;
+		max-width: 200px;
+	}
+	
+	.article-body {
+		margin-top: 20px;
+		width: 80%;
+	}
+	
+	.full.article-body {
+		margin-top: 20px;
+		width: 45%;
+	}
+	
+	.top-articles {
+		width: 90%;
+		margin-top: 20px;
+		margin-left: 50px;
+	}
+	
+	.article-list {
+		list-style-type: none;
+		counter-reset: li-counter;
+	}
+	
+	.article-list > li:before {
+		position: absolute;
+		margin-top: 50px;
+		margin-left: 20px;
+		left: 0px;
+		text-align: center;
+		font-size: 2em;
+		background-color: white;
+		border: 4px solid black;
+		border-radius: 50%;
+		-moz-border-radius: 50%;
+		-webkit-border-radius: 50%;
+		width: 50px;
+		height: 50px;
+		content: counter(li-counter);
+		counter-increment: li-counter;
+	}
+	
+	#footer {
+		width: 70%;
+	}
+	
+	#read-next {
+		border-top: 1px solid black;
+		border-bottom: 1px solid black;
+		padding: 10px 0;
+	}
+	
+	#read-next h2, #read-next #arrows{
+		display: inline;
+		font-size: 2.5em;
+	}
+	
+	#arrows {
+		position: relative;
+		font-size: 2.0em;
+		line-height: 5%;
+		float: right;
+	}
+	
+	#arrows a {
+		position: relative;
+		font-size: 2.0em;
+		top: 17px;
+		text-decoration: none;
+	}
+	
+	#arrows a:hover {
+		color: #000099;
+	}
+	
+	#read-next-links {
+		clear: both;
+		position: relative;
+		left: -80px;
+		width: 140%;
+	}
+	#read-next-links li {
+		margin-top: 15px;
+		padding: 0 15px;
+		display: inline-block;
+		text-align: center;
+		font-size: 0.9em;
+	}
+	#read-next-links li a .nav-img {
+		width: 60px;
+		height: 60px;
+	}
+	
+	
+	
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+	.nav-group {
+		margin-left: 15px;
+		height: 55px;
+		border: 1px solid black;
+	}
+	.full.article-body {
+		margin-top: 20px;
+		width: 60%;
+	}
+	#read-next-links {
+		clear: both;
+		position: relative;
+		left: -50px;
+		width: 100%;
+	}
+	#read-next-links li {
+		margin-top: 15px;
+		padding: 0 15px;
+		display: inline-block;
+		text-align: center;
+	}
+	#read-next-links li a .nav-img {
+		width: 110px;
+		height: 110px;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { ... }
+
+

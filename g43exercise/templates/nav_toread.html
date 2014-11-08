@@ -1,0 +1,25 @@
+{% load random_article %}
+		<div id="read-next">
+			<h2>What to Read Next</h2>
+			<div id="arrows">
+				<a href="">&lt;</a>|<a href="">&gt;</a>
+			</div>
+		</div>
+		<ul id="read-next-links" class="nav-links">
+		{% get_random_article_list as article_set %}
+		{% if article_set %}
+			{% for article in article_set %}
+			<li>
+				<a href="{% url 'g43:detail' article.article_id %}">
+					<div class="nav-img"></div>
+					{{article.title}}
+				</a>
+			</li>
+			{% endfor %}	
+		{% else %}
+			<li><a href=""><div class="nav-img"></div>Related Title 1</a></li>
+			<li><a href=""><div class="nav-img"></div>Related Title 2</a></li>
+			<li><a href=""><div class="nav-img"></div>Related Title 3</a></li>
+			<li><a href=""><div class="nav-img"></div>Related Title 4</a></li>
+		{% endif %}			
+		</ul>
